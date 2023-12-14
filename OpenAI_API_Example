@@ -57,3 +57,4 @@ for message in reversed(messages.data):
   print("---printing messages:")
   print(message.role + ": " + message.content[0].text.value)
 
+
