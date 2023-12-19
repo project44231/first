@@ -1,8 +1,12 @@
 # import openai api
+import os
 import time
 from openai import OpenAI
 
-client = OpenAI(api_key= "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")   
+# SETX API_KEY_OPENAI ""
+API_KEY_OPENAI = os.getenv('API_KEY_OPENAI')
+print(API_KEY_OPENAI)
+client = OpenAI(api_key=API_KEY_OPENAI)  
 
 assistant = client.beta.assistants.create(
     name="Math Tutor",
